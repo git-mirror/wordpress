@@ -279,6 +279,8 @@ function wp_default_scripts( &$scripts ) {
 
 	$scripts->add( 'media-upload', "/wp-admin/js/media-upload$suffix.js", array( 'thickbox' ), '20110930', 1 );
 
+	$scripts->add( 'hoverIntent', "/wp-includes/js/hoverIntent$suffix.js", array('jquery'), '20090102', 1 );
+
 	if ( is_admin() ) {
 		$scripts->add( 'ajaxcat', "/wp-admin/js/cat$suffix.js", array( 'wp-lists' ), '20090102' );
 		$scripts->add_data( 'ajaxcat', 'group', 1 );
@@ -369,8 +371,6 @@ function wp_default_scripts( &$scripts ) {
 
 		$scripts->add( 'dashboard', "/wp-admin/js/dashboard$suffix.js", array( 'jquery', 'admin-comments', 'postbox' ), '20111118', 1 );
 
-		$scripts->add( 'hoverIntent', "/wp-includes/js/hoverIntent$suffix.js", array('jquery'), '20090102', 1 );
-
 		$scripts->add( 'list-revisions', "/wp-includes/js/wp-list-revisions$suffix.js", null, '20091223' );
 
 		$scripts->add( 'media', "/wp-admin/js/media$suffix.js", array( 'jquery-ui-draggable' ), '20101022', 1 );
@@ -433,7 +433,7 @@ function wp_default_styles( &$styles ) {
 	// Any rtl stylesheets that don't have a .dev version for ltr
 	$no_suffix = array( 'farbtastic' );
 
-	$styles->add( 'wp-admin', "/wp-admin/css/wp-admin$suffix.css", array(), '20111120b' );
+	$styles->add( 'wp-admin', "/wp-admin/css/wp-admin$suffix.css", array(), '20111122' );
 
 	$styles->add( 'ie', "/wp-admin/css/ie$suffix.css", array(), '20111119' );
 	$styles->add_data( 'ie', 'conditional', 'lte IE 7' );
@@ -454,7 +454,7 @@ function wp_default_styles( &$styles ) {
 	$styles->add( 'farbtastic', '/wp-admin/css/farbtastic.css', array(), '1.3u1' );
 	$styles->add( 'jcrop', '/wp-includes/js/jcrop/jquery.Jcrop.css', array(), '0.9.8' );
 	$styles->add( 'imgareaselect', '/wp-includes/js/imgareaselect/imgareaselect.css', array(), '0.9.1' );
-	$styles->add( 'admin-bar', "/wp-includes/css/admin-bar$suffix.css", array(), '20111120' );
+	$styles->add( 'admin-bar', "/wp-includes/css/admin-bar$suffix.css", array(), '20111121' );
 	$styles->add( 'wp-jquery-ui-dialog', "/wp-includes/css/jquery-ui-dialog$suffix.css", array(), '20111107' );
 	$styles->add( 'editor-buttons', "/wp-includes/css/editor-buttons$suffix.css", array(), '20111114' );
 	$styles->add( 'wp-pointer', "/wp-includes/css/wp-pointer$suffix.css", array(), '20111114' );
